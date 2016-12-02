@@ -12,27 +12,63 @@
     margin-left: -4px;
   }
 }
+p{
+    text-align: justify;
+    line-height: 1.78;
+    font-family: latom;
+    @media (max-width: 480px){
+      line-height: 1.5;
+    }
+}
 
 .button {
   text-align: center;
   border-radius: 100px;
-  font-family: Latom;
+  font-family: Latob;
   font-size: 1.3em;
-  padding: 20px;
   display: inline-block;
-  &.lgreen {
-    background: $lightGreen;
+  margin: 30px 0;
+
+  &.l-green {
+    background: $btn-lightGreen;
     color: $greyTextColor;
     &:hover {
-      background: $darkGreen;
+      background: $btn-darkGreen;
       color: #fff;
     }
   }
   &.green {
-    background: $darkGreen;
+    background: $btn-darkGreen;
+    color: #fff;
+    &:hover{
+      background: $btn-darkGreen;
+      color: #fff;
+      display: inline-block;
+      position: relative;
+      z-index: 5;
+      background: transparent;
+      position: absolute;
+    }
+  }
+  &.small-btn{
+    padding: 11px 35px 8px;
+    font-size: 1.7em;
+  }
+  &.big-btn{
+    padding: 22px 25px 18px;
   }
 
 }
+.title{
+  text-align: center;
+  font-family: latom;
+  font-size: 2.15em;
+  margin-bottom: 28px;
+  @media (max-width: 420px) {
+    font-size: 1.9em;
+  }
+}
+
 
 .dotted {
   text-align: center;
@@ -50,6 +86,13 @@
 }
 
 span {
+  &.border-bot{
+    padding-bottom: 2px;
+    border-bottom: 3px solid #3fbb01;
+  }
+  &.color-green{
+    color: $darkGreen;
+  }
   &.paragraph {
     color: $darkGreen;
     &::before{
@@ -61,18 +104,33 @@ span {
     }
   }
   &.indent{
-    padding-left: 18px;
+    text-indent: 18px;
+    display: inline-block;
     @media (max-width: 500px){
-      padding-left: 10px;
+      text-indent: 10px;
     }
   }
 }
-.buy-diploma-text {
-  font-family: latom;
-  word-spacing: 3.7px;
-  line-height: 1.78;
-  @media (max-width: 500px){
-    line-height: 1.5;
+.custom-input{
+  width: 100%;
+  height: 60px;
+  border: 2px solid $inputGrey;
+  border-radius: 30px;
+  background: transparent !important;
+  z-index: 10 !important;
+  margin-bottom: 20px;
+  padding: 0 0 0 20px;
+  &:focus{
+    outline-offset: 0;
+    outline: none;
+    border-color: $darkGreen;
+    & + span{
+      opacity: 0;
+      font-size: 0.1em;
+      max-width: 14px;
+
+    }
   }
+
 
 }

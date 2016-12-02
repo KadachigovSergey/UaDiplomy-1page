@@ -83,9 +83,12 @@
     .tell {
       float: left;
       margin-right: 30px;
+      @media (max-width: 640px){
+        margin: 15px;
+      }
       @media (max-width: 450px) {
         float: none;
-        margin-right: 0;
+        margin: 0;
       }
       &:hover {
         .icon-tell {
@@ -116,18 +119,11 @@
       float: left;
       @media (max-width: 640px) {
         float: none;
-      }
-      @media (max-width: 450px) {
-        .mail-icon, .skype-icon {
-          margin: 0;
-        }
+        display: none;
       }
       .skype {
         margin: 2px 0 12px 0;
         display: inline-block;
-        @media (max-width: 640px) {
-          margin: 2px 0 4px 0;
-        }
         &:hover {
           .skype-icon {
             background: url(../img/skype-icon-hover.png) no-repeat left center;
@@ -142,9 +138,6 @@
           height: 17px;
           margin: 0 22px -2px 0;
           vertical-align: bottom;
-          @media (max-width: 450px) {
-            margin: 0;
-          }
         }
       }
       .mail {
@@ -354,6 +347,7 @@
         }
         @media (max-width: 991px) {
           margin-left: 0;
+          padding-left: 0;
         }
 
       }
@@ -379,7 +373,6 @@
         position: relative;
       }
       .order-document {
-
         a {
           span {
             border-bottom: none;
