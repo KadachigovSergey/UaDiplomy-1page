@@ -41,13 +41,8 @@ p{
     background: $btn-darkGreen;
     color: #fff;
     &:hover{
-      background: $btn-darkGreen;
-      color: #fff;
-      display: inline-block;
-      position: relative;
-      z-index: 5;
-      background: transparent;
-      position: absolute;
+      background: $btn-lightGreen;
+      color: $greyTextColor;
     }
   }
   &.small-btn{
@@ -55,7 +50,7 @@ p{
     font-size: 1.7em;
   }
   &.big-btn{
-    padding: 22px 25px 18px;
+    padding: 22px 60px 18px;
   }
 
 }
