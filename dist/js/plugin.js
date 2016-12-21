@@ -1,6 +1,5 @@
 ;(function ($){
     $(window).on('load', function(){
-        // $('select').styler();
 
 
         var sidebarBtn = $('.mobile-btn');
@@ -9,6 +8,18 @@
             sidebarBtn.toggleClass('open');
             sidebar.toggleClass('open');
         });
+    });
+
+    var input = $('.custom-input');
+    input.on('change', function () {
+        var inputVal =  $(this).val();
+        var placeholder = $(this).next('span');
+
+        if (inputVal && inputVal != ' '){
+            placeholder.addClass('hidden');
+        } else if(!inputVal || ' '){
+            placeholder.removeClass('hidden');
+        }
     });
 
 })(jQuery);
